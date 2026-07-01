@@ -1,12 +1,9 @@
-// import React from 'react'
-
-const App = () => {
-  return (
-    <div>
- <h1 class="text-3xl text-amber-300 font-bold ">
-    Hello world!
-  </h1>    </div>
-  )
+import AppRoutes from "./routes/AppRoutes";
+function App() {
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
+
+
+

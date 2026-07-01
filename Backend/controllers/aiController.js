@@ -23,7 +23,21 @@ const generateResponse = async (req, res) => {
       });
     }
 
-    const response = await generateAIResponse(systemPrompt, code);
+    const userPrompt = `
+Selected Programming Language: ${language}
+
+Analyze the following code strictly as ${language}.
+
+If the submitted code does not belong to ${language},
+return an error instead of analyzing it.
+
+Code:
+
+${code}
+`;
+
+const response = await generateAIResponse(systemPrompt, userPrompt);
+
     console.log(req.user);
     await History.create({
   user: req.user.id,
@@ -40,13 +54,15 @@ const generateResponse = async (req, res) => {
     });
 
   } catch (error) {
-    console.error(error);
+
+    console.log(error);
 
     return res.status(500).json({
-      success: false,
-      message: error.message,
+        success: false,
+        message: "Failed to generate AI response"
     });
-  }
+
+}
 };
 
 module.exports = {

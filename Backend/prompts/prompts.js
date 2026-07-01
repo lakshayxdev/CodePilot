@@ -91,31 +91,6 @@ Sections should include:
 • Suggestions
 `,
 
-optimize: `
-${BASE_RULES}
-
-TASK:
-
-Optimize the submitted code.
-
-Populate:
-
-title
-summary
-sections
-code (optimized version)
-timeComplexity
-spaceComplexity
-conclusion
-
-Sections should include:
-
-• Performance Improvements
-• Memory Optimizations
-• Readability Improvements
-• Explanation
-`,
-
 debug: `
 ${BASE_RULES}
 
@@ -186,14 +161,32 @@ Return ONLY this JSON:
   "timeComplexity": "",
   "spaceComplexity": "",
   "conclusion": "",
-  "metrics": {
-    "readability": 0,
-    "maintainability": 0,
-    "performance": 0,
-    "security": 0,
-    "scalability": 0,
-    "bestPractices": 0
+ "metrics": {
+  "readability": {
+    "score": 0,
+    "reason": ""
+  },
+  "maintainability": {
+    "score": 0,
+    "reason": ""
+  },
+  "performance": {
+    "score": 0,
+    "reason": ""
+  },
+  "security": {
+    "score": 0,
+    "reason": ""
+  },
+  "scalability": {
+    "score": 0,
+    "reason": ""
+  },
+  "bestPractices": {
+    "score": 0,
+    "reason": ""
   }
+}
 }
 
 Scoring Rules:
@@ -236,6 +229,9 @@ STRICT RULES:
 6. If multiple inputs exist, represent them as arrays.
 7. Expected outputs must be exact.
 8. Keep the test cases concise but comprehensive.
+9. The first character must be {
+The last character must be }
+The response must be valid JSON parsable by JSON.parse().
 
 Return ONLY this JSON:
 
