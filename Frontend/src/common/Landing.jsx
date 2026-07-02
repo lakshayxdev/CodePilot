@@ -8,9 +8,12 @@ const Landing = () => {
   return (
     <>
   <Navbar />
-  <Home />
-  <Features />
-  <Docs />
+     <Home />
+ 
+      <Features />
+ 
+      <Docs />
+ 
   <Footer />
   </>
   )

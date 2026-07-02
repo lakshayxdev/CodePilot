@@ -19,7 +19,7 @@ const Dashboard = () => {
   const [stats, setStats] = useState({
     totalAnalysis: 0,
     debugRequests: 0,
-    optimizeRequests: 0,
+    testCases: 0,
   });
 
   const navigate=useNavigate();
@@ -32,7 +32,7 @@ const Dashboard = () => {
 
         setStats(response.data.stats);
         setRecentAnalysis(response.data.recentAnalysis);
-
+        console.log(response.data.stats);
       } catch (error) {
         console.log("Error : ", error.message);
       } finally {
@@ -107,8 +107,8 @@ const Dashboard = () => {
         />
 
         <StatsCard
-          title="Optimize Requests"
-          value={stats.optimizeRequests}
+          title="Test Cases Generated"
+          value={stats.testCases}
           icon={<FaChartLine />}
         />
 

@@ -20,22 +20,22 @@ const getHistory = async (req, res) => {
   }
 };
 
-const getHistoryById = async(req, res) => {
+const deleteHistoryById = async(req,res) => {
     try {
-        const history=await History.findOne ({
+        const history = await History.findOne({
             _id: req.params.id,
             user: req.user.id,
         })
-
         if(!history) {
             return res.status(404).json({
                 success: false,
                 message: "History not found",
             })
         }
+        await history.deleteOne();
         res.status(200).json({
             success: true,
-            history,
+            message: "History deleted successfullt",
         })
     }
     catch(error) {

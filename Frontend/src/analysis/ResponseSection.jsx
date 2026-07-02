@@ -2,7 +2,6 @@ import AnalyzeComplexity from "./AnalyzeComplexity";
 import CodeQualityResponse from "./CodeQualityAnalysis";
 import DebugResponse from "./DebugResponse";
 import ExplainResponse from "./ExplainResponse";
-import OptimizeResponse from "./OptimizeResponse";
 import ReviewResponse from "./ReviewResponse";
 import TestCaseGeneration from "./TestCaseGeneration";
 

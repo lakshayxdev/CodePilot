@@ -1,4 +1,5 @@
 const  History = require("../modals/History");
+const { testcases } = require("../prompts/prompts");
 
 const getDashboardData = async (req, res) => {
   try {
@@ -14,9 +15,9 @@ const getDashboardData = async (req, res) => {
       action: "debug",
     });
 
-    const optimizeRequests = await History.countDocuments({
+    const testCases = await History.countDocuments({
       user: userId,
-      action: "optimize",
+      action: "testcases",
     });
 
     // Latest 2 analyses
@@ -33,7 +34,7 @@ const getDashboardData = async (req, res) => {
       stats: {
         totalAnalysis,
         debugRequests,
-        optimizeRequests,
+        testCases,
       },
 
       recentAnalysis,
