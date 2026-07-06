@@ -110,14 +110,14 @@ if(form.password.length < 6){
           </div>
       
       
-          <div className="relative flex items-center justify-center min-h-screen px-6">
+         <div className="relative min-h-screen flex justify-center items-start md:items-center pt-28 md:pt-0 pb-8 px-6">
       
-            <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-3xl shadow-[0_20px_70px_rgba(0,0,0,.6)] p-10">
+            <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-3xl shadow-[0_20px_70px_rgba(0,0,0,.6)] p-6 sm:p-8 md:p-10">
       
       
               <div className="text-center">
       
-                <h2 className="text-4xl font-bold text-white">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white">
       
                   Create Account
       
@@ -135,7 +135,7 @@ if(form.password.length < 6){
       
               <form
                onSubmit={handlesubmit}
-                className="mt-10 space-y-6"
+                className="mt-8 space-y-5 sm:mt-10 sm:space-y-6"
               >
 
                 {/* Name */}
@@ -160,7 +160,7 @@ if(form.password.length < 6){
                       value={form.name}
                      onChange={namechange}
                       placeholder="John Doe"
-                      className="w-full rounded-xl border border-white/10 bg-[#121214] py-3.5 pl-12 pr-4 text-white outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                      className="w-full rounded-xl border border-white/10 bg-[#121214] py-3 sm:py-3.5 pl-12 pr-4 text-white outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                     />
       
                   </div>
@@ -189,7 +189,7 @@ if(form.password.length < 6){
                       value={form.email}
                      onChange={emailchange}
                       placeholder="name@company.com"
-                      className="w-full rounded-xl border border-white/10 bg-[#121214] py-3.5 pl-12 pr-4 text-white outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                      className="w-full rounded-xl border border-white/10 bg-[#121214] py-3 sm:py-3.5 pl-12 pr-4 text-white outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                     />
       
                   </div>
@@ -222,7 +222,7 @@ if(form.password.length < 6){
                       value={form.password}
                      onChange={passwordchange}
                       placeholder="••••••••"
-                      className="w-full rounded-xl border border-white/10 bg-[#121214] py-3.5 pl-12 pr-12 text-white outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                      className="w-full rounded-xl border border-white/10 bg-[#121214] py-3 sm:py-3.5 pl-12 pr-12 text-white outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                     />
       
                      <button type="button" onClick={()=> setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white">
@@ -244,7 +244,7 @@ if(form.password.length < 6){
                  <button
   type="submit"
   disabled={loading}
-  className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 py-4 font-semibold text-[#04120B] shadow-[0_10px_30px_rgba(16,185,129,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(16,185,129,.45)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-[0_10px_30px_rgba(16,185,129,.25)]"
+  className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 py-3.5 sm:py-4 font-semibold text-[#04120B] shadow-[0_10px_30px_rgba(16,185,129,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(16,185,129,.45)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-[0_10px_30px_rgba(16,185,129,.25)]"
 >
       
                   <span className="flex items-center justify-center gap-2">
