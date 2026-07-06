@@ -145,12 +145,13 @@ html {
   }
 }
 
+
 @keyframes loading {
-  0% {
-    transform: translateX(-120%);
+  from {
+    width: 0%;
   }
 
-  100% {
-    transform: translateX(320%);
+  to {
+    width: 100%;
   }
 }

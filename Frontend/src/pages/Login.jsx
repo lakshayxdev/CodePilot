@@ -85,8 +85,8 @@ if (!emailRegex.test(form.email)) {
         </div>
     
     
-        <div className="absolute top-8 left-10 flex items-center gap-3">
-    
+<div className="absolute top-8 left-6 md:left-10 flex items-center gap-3 z-20">
+
           <div className="w-11 h-11 rounded-xl bg-[#042B1A] border border-emerald-500/30 flex items-center justify-center">
     
             <FaCode className="text-emerald-400 text-lg" />
@@ -102,9 +102,9 @@ if (!emailRegex.test(form.email)) {
         </div>
     
     
-        <div className=" relative flex items-center justify-center min-h-screen px-6">
-    
-          <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-3xl shadow-[0_20px_70px_rgba(0,0,0,.6)] p-10">
+<div className="relative min-h-screen flex flex-col items-center justify-start md:justify-center pt-28 md:pt-0 pb-8 px-6">  
+
+          <div className="w-full max-w-md mt-6 md:mt-0 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-3xl shadow-[0_20px_70px_rgba(0,0,0,.6)] p-10">
     
     
             <div className="text-center">
@@ -201,10 +201,11 @@ if (!emailRegex.test(form.email)) {
                   
     
     
-              <button
-                type="submit"
-                className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 py-4 font-semibold text-[#04120B] shadow-[0_10px_30px_rgba(16,185,129,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(16,185,129,.45)] active:scale-[0.98]"
-              >
+             <button
+  type="submit"
+  disabled={loading}
+  className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 py-4 font-semibold text-[#04120B] shadow-[0_10px_30px_rgba(16,185,129,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(16,185,129,.45)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-[0_10px_30px_rgba(16,185,129,.25)]"
+>
     
                 <span className="flex items-center justify-center gap-2">
     

@@ -117,10 +117,11 @@ const handleAnalyze = async() => {
 
     <div className="mt-8">
 
-      <button
-        onClick={handleAnalyze}
-        className="flex items-center gap-3 rounded-xl bg-emerald-400 px-8 py-3 font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.35)]"
-      >
+     <button
+  onClick={handleAnalyze}
+  disabled={loading}
+  className="flex items-center gap-3 rounded-xl bg-emerald-400 px-8 py-3 font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.35)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-emerald-400 disabled:hover:shadow-none"
+>
 
         {loading? (
           <>

@@ -241,10 +241,11 @@ if(form.password.length < 6){
     
                 {/* Login Button */}
       
-                <button
-                  type="submit"
-                  className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 py-4 font-semibold text-[#04120B] shadow-[0_10px_30px_rgba(16,185,129,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(16,185,129,.45)] active:scale-[0.98]"
-                >
+                 <button
+  type="submit"
+  disabled={loading}
+  className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500 py-4 font-semibold text-[#04120B] shadow-[0_10px_30px_rgba(16,185,129,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(16,185,129,.45)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-[0_10px_30px_rgba(16,185,129,.25)]"
+>
       
                   <span className="flex items-center justify-center gap-2">
       

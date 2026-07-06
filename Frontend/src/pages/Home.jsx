@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
 
 
-        <div className="inline-flex items-center gap-3 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 backdrop-blur-md">
+        {/* <div className="inline-flex items-center gap-3 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 backdrop-blur-md">
 
           <span className="relative flex h-2.5 w-2.5">
 
@@ -50,7 +50,33 @@ const Hero = () => {
 
           </span>
 
-        </div>
+        </div> */}
+
+<div
+  className="
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    border
+    border-emerald-500/20
+    bg-emerald-500/10
+    backdrop-blur-md
+    px-5
+    py-2.5
+    mb-6
+    shadow-[0_0_20px_rgba(16,185,129,0.08)]
+  "
+>
+  <span className="relative flex h-2 w-2">
+    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70"></span>
+    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 ring-4 ring-emerald-500/20"></span>
+  </span>
+
+  <span className="text-sm font-medium tracking-wide text-emerald-300">
+    AI-Powered Developer Assistant
+  </span>
+</div>
 
 
         <h1 className="mt-10 text-4xl md:text-5xl font-black leading-tight sm:text-6xl lg:text-7xl">

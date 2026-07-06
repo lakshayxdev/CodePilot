@@ -8,6 +8,7 @@ const Landing = () => {
   return (
     <>
   <Navbar />
+  
      <Home />
  
       <Features />
