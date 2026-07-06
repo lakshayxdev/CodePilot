@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "https://codepilot-kkqy.onrender.com/api",
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://codepilot-1-f6hb.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
