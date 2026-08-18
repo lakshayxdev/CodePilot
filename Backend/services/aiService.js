@@ -7,7 +7,8 @@ const groq = new Groq({
 const generateAIResponse = async (systemPrompt, userPrompt) => {
   try {
     const completion = await groq.chat.completions.create({
-      model: "llama-3.3-70b-versatile",
+      // model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-120b",
       temperature: 0,
       messages: [
         {
