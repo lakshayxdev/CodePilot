@@ -3,6 +3,9 @@ import TestCaseCard from "./TestCaseCard";
 const TestCaseGeneration = ({ response }) => {
   if (!response) return null;
 
+  const testCases = response.testCases || [];
+  const edgeCases = response.edgeCases || [];
+
   return (
     <div className="mt-10 space-y-10">
 
@@ -56,7 +59,7 @@ const TestCaseGeneration = ({ response }) => {
 
           <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300">
 
-            {response.testCases.length} Cases
+            {testCases.length} Cases
 
           </span>
 
@@ -64,7 +67,7 @@ const TestCaseGeneration = ({ response }) => {
 
         <div className="grid gap-6 lg:grid-cols-2">
 
-          {response.testCases.map((testCase, index) => (
+          {testCases.map((testCase, index) => (
 
             <TestCaseCard
               key={index}
@@ -88,7 +91,7 @@ const TestCaseGeneration = ({ response }) => {
 
           <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300">
 
-            {response.edgeCases.length} Cases
+            {edgeCases.length} Cases
 
           </span>
 
@@ -96,7 +99,7 @@ const TestCaseGeneration = ({ response }) => {
 
         <div className="grid gap-6 lg:grid-cols-2">
 
-          {response.edgeCases.map((testCase, index) => (
+          {edgeCases.map((testCase, index) => (
 
             <TestCaseCard
               key={index}
